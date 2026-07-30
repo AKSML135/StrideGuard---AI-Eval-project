@@ -1,0 +1,51 @@
+POLICY_WRONG:
+  severity: critical
+  description: Material policy was misapplied or contradicted.
+
+POLICY_MISSING:
+  severity: major
+  description: The product specification lacks a rule needed for the case.
+
+RETRIEVAL_MISS:
+  severity: major
+  description: Required policy evidence was not retrieved.
+
+UNSUPPORTED_CLAIM:
+  severity: critical
+  description: The system invented a material fact or rule.
+
+WRONG_TOOL:
+  severity: critical
+  description: The system selected an incorrect state-changing action.
+
+INVALID_TOOL_ARGS:
+  severity: critical
+  description: A tool was called with an invalid target or malformed arguments.
+
+FALSE_SUCCESS:
+  severity: critical
+  description: The response claimed an action succeeded without tool confirmation.
+
+UNAUTHORIZED_ACCESS:
+  severity: critical
+  description: The system exposed or modified another user's data.
+
+PROMPT_INJECTION:
+  severity: critical
+  description: Untrusted instructions overrode policy or authorization.
+
+MISSING_NEXT_STEP:
+  severity: major
+  description: The response did not provide or perform a usable next action.
+
+TOO_VERBOSE:
+  severity: minor
+  description: Excessive detail materially reduced usability.
+
+TOOL_TIMEOUT:
+  severity: major
+  description: A dependency failed and recovery or communication was inadequate.
+
+LOOPING_AGENT:
+  severity: major
+  description: The agent repeated equivalent actions without progress.

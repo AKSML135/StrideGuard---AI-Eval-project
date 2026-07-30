@@ -1,0 +1,20 @@
+[
+  {
+    "product_id": "P-100",
+    "name": "CloudPeak Max",
+    "description": "Maximum cushioning and long-run use",
+    "category": "road_running"
+  },
+  {
+    "product_id": "P-101",
+    "name": "TempoWing",
+    "description": "Faster daily training",
+    "category": "road_running"
+  },
+  {
+    "product_id": "P-102",
+    "name": "TrailForge",
+    "description": "Mixed and technical trails",
+    "category": "trail_running"
+  }
+]
