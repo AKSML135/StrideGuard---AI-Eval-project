@@ -10,11 +10,8 @@ def build_chat_model(
 ) -> Any:
     settings = settings or get_settings()
     api_key = settings.require_selected_api_key()
-
     chosen_temperature = (
-        settings.llm_temperature
-        if temperature is None
-        else temperature
+        settings.llm_temperature if temperature is None else temperature
     )
 
     if settings.llm_provider == "groq":

@@ -1,0 +1,32 @@
+name: deterministic-evals
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  unit-and-dataset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install offline test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pydantic pyyaml pandas scikit-learn pytest
+          python -m pip install --no-deps -e .
+
+      - name: Run unit tests
+        run: pytest tests/unit -q
+
+      - name: Validate golden dataset
+        run: python scripts/validate_dataset.py evals/datasets/dev.jsonl
+
+      - name: Compile Python modules
+        run: python -m compileall -q src scripts apps tests

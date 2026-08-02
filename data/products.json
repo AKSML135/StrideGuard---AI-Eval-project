@@ -2,19 +2,22 @@
   {
     "product_id": "P-100",
     "name": "CloudPeak Max",
-    "description": "Maximum cushioning and long-run use",
-    "category": "road_running"
+    "category": "road",
+    "description": "Maximum cushioning designed for long-run use.",
+    "use_case": "long-distance daily running"
   },
   {
-    "product_id": "P-101",
+    "product_id": "P-200",
     "name": "TempoWing",
-    "description": "Faster daily training",
-    "category": "road_running"
+    "category": "road",
+    "description": "A lighter, more responsive shoe for faster daily training.",
+    "use_case": "tempo runs and speed training"
   },
   {
-    "product_id": "P-102",
+    "product_id": "P-300",
     "name": "TrailForge",
-    "description": "Mixed and technical trails",
-    "category": "trail_running"
+    "category": "trail",
+    "description": "Reinforced grip and protection for mixed and technical trails.",
+    "use_case": "trail running on rocky or technical terrain"
   }
 ]

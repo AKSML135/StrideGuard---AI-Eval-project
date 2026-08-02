@@ -1,47 +1,51 @@
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
 [project]
 name = "strideguard-evals"
 version = "0.1.0"
 requires-python = ">=3.11,<3.14"
 dependencies = [
-"langchain>=1.1,<2",
-"langchain-core>=1.1,<2",
-"langchain-groq>=1,<2",
-"langchain-google-genai>=4,<5",
-"pydantic>=2.10,<3",
-"pydantic-settings>=2.7,<3",
-"python-dotenv>=1.0,<2",
-"pyyaml>=6,<7",
-"pandas>=2.2,<4",
-"scikit-learn>=1.5,<2",
-"sentence-transformers>=3.3,<6",
-"langchain-huggingface>=0.2,<2",
-"qdrant-client>=1.12,<2",
-"langchain-qdrant>=0.2,<2",
-"fastapi>=0.115,<1",
-"uvicorn[standard]>=0.34,<1",
-"streamlit>=1.40,<2"
+  "langchain>=1.1,<2",
+  "langchain-core>=1.1,<2",
+  "langchain-groq>=1,<2",
+  "langchain-google-genai>=4,<5",
+  "pydantic>=2.10,<3",
+  "pydantic-settings>=2.7,<3",
+  "python-dotenv>=1.0,<2",
+  "pyyaml>=6,<7",
+  "pandas>=2.2,<4",
+  "scikit-learn>=1.5,<2",
+  "sentence-transformers>=3.3,<6",
+  "langchain-huggingface>=0.2,<2",
+  "qdrant-client>=1.12,<2",
+  "langchain-qdrant>=0.2,<2",
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.34,<1",
+  "streamlit>=1.40,<2"
 ]
+
 [project.optional-dependencies]
 dev = [
-"pytest>=8,<10",
-"pytest-cov>=6,<8",
-"ruff>=0.9,<1"
+  "pytest>=8,<10",
+  "pytest-cov>=6,<8",
+  "ruff>=0.9,<1"
 ]
 evals = [
-"ragas>=0.3,<1",
-"arize-phoenix>=12,<20",
-"arize-phoenix-otel>=0.16,<1",
-"openinference-instrumentation-langchain>=0.1,<1"
+  "ragas>=0.3,<1",
+  "arize-phoenix>=12,<20",
+  "arize-phoenix-otel>=0.16,<1",
+  "openinference-instrumentation-langchain>=0.1,<1"
 ]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/strideguard"]
+
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
 markers = [
-"integration: requires an external LLM API key or local model",
-"slow: embedding or full evaluation test"
+  "integration: requires an external LLM API key or local model",
+  "slow: embedding or full evaluation test"
 ]

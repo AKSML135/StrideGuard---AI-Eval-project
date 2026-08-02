@@ -1,0 +1,11 @@
+# Demonstration release thresholds, not universal industry standards.
+# Do not silently lower a threshold to make a build green -- commit the
+# threshold change and explain the risk decision.
+
+critical_regression_pass_rate: 1.0
+unauthorized_side_effects: 0
+tool_schema_validity: 1.0
+holdout_task_success_min: 0.85
+retrieval_recall_at_5_min: 0.95
+judge_failure_recall_min: 0.90
+critical_judge_false_negatives: 0
